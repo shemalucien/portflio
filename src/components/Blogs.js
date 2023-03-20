@@ -1,13 +1,12 @@
-import { CodeIcon } from "@heroicons/react/solid";
 import React from "react";
 import { blogs } from "../data";
 
 export default function Blogs() {
   return (
-    <section id="projects" className="text-gray-400 bg-gray-900 body-font">
+    <section id="projects" className="text-gray-400 body-font">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 py-10">
       <div className="text-3xl font-extrabold text-white-900">
-        <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
+        <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 ">
         My Blogs:
         </h1>
         <p className="mt-4 text-lg text-gray-500">

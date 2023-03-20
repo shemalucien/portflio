@@ -1,10 +1,9 @@
-import { CodeIcon } from "@heroicons/react/solid";
 import React from "react";
 import { services } from "../data";
-
-export default function Services() {
+export default function Services(props) {
   return (
     <section id="projects" className="text-gray-400 bg-gray-900 body-font">
+       <img src={props.darkMode ? "./assets/toggle-icon-dark.svg" : "./assets/toggle-icon-dark.svg"} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 py-10">
         <div className="text-3xl font-extrabold text-white-900">
           <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 text-white">
