@@ -14,7 +14,6 @@ const Dashboard = () => {
   }, []);
 
   const { username, email } = useSelector(userSelector);
-
   useEffect(() => {
     if (isError) {
       dispatch(clearState());
@@ -34,16 +33,21 @@ const Dashboard = () => {
         <Loader type="Puff" color="#00BFFF" height={100} width={100} />
       ) : (
         <Fragment>
-          <div className="container mx-auto">
-            Welcome back <h3>{username}</h3>
+          
+          <div className="flex flex-col items-center justify-center py-2">
+            <h1 className="text-3xl font-bold text-white">
+            Welcome back </h1>
+            <h1 className="text-2xl font-bold text-white">{username}</h1>
           </div>
-
+      
+          <div className="flex flex-col items-center justify-center  py-2">
           <button
             onClick={onLogOut}
-            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded "
           >
             Log Out
           </button>
+          </div>
         </Fragment>
       )}
     </div>
