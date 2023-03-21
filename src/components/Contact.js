@@ -1,5 +1,7 @@
 import React from "react";
-
+import { AiOutlineMail } from 'react-icons/ai';
+import {FiPhoneCall} from 'react-icons/fi';
+import {MdLocationOff} from 'react-icons/md';
 export default function Contact() {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
@@ -27,10 +29,10 @@ export default function Contact() {
   return (
     <section id="contact" className="">
       <div className="container px-5 py-5 mx-auto flex sm:flex-nowrap flex-wrap">
-        <div className="lg:w-2/3 md:w-1/2 flex flex-col rounded-lg overflow-hidden sm:mr-10 md:py-8 mt-8 md:mt-0  relative">
-          <div className="">
+        <div className="lg:w-1/2 md:w-1/2 flex flex-col rounded-lg overflow-hidden sm:mr-5 md:py-8 mt-8 md:mt-0">
+          <div className="text-center">
             <div className="lg:w-full ">
-              <h1 className="text-white text-center sm:text-4xl text-3xl mb-1 font-medium title-font">
+              <h1 className="sm:text-4xl text-3xl font-extrabold text-white-900 mb-4 ">
                 Get Our Weekly
               </h1>
               <h3 className="text-center">
@@ -44,7 +46,7 @@ export default function Contact() {
               </h2>
               <div className="flex justify-center">
                 <input type="text" className="mt-6 mr-5  rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-500 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out "></input>
-               {/* reduce the button size */}
+                {/* reduce the button size */}
                 <button className="mt-6 px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-blue-600 transition-all duration-300">
                   <a href="https://drive.google.com/file/d/1TjhqZ-v6hY8-4g6vz_1y6v1y8T6v1y8/view?usp=sharing" target="_blank" rel="noreferrer">
                     Subscribe
@@ -61,27 +63,31 @@ export default function Contact() {
 
             </div>
             <div className="lg:w-full flex flex-1 mt-12">
-              <div className="lg:w-full text-center mr-3">
-                <h2 className="title-font font-semibold tracking-widest text-xs text-center ">
+              <div className="lg:w-full mr-3 flex flex-col justify-center items-center">
+                {/* <h2 className="title-font font-semibold tracking-widest text-xs text-center ">
                   ADDRESS
-                </h2>
+                </h2> */}
+                <MdLocationOff className="inline-block mb-2 text-xl" />
                 <p className="text-center">
                   Kigali,Rwanda
                 </p>
               </div>
-
-              <div className="lg:w-full mr-3">
-                <h2 className="title-font font-semibold  text-xs tracking-widest text-center">
+                <div class="lg:w-full mr-3 flex flex-col justify-center items-center">
+                       {/* <h2 className="title-font font-semibold  text-xs tracking-widest text-center">
                   EMAIL
-                </h2>
-                <p className="text-indigo-400 text-center">
-                  shemalucien5@gmail.com
-                </p>
-              </div>
-              <div className="lg:w-full mr-3">
-                <h2 className="title-font font-semibold tracking-widest text-xs text-center">
+                </h2> */}
+                  <AiOutlineMail class="text-2xl mb-2" />
+                  <p className="text-indigo-400 text-center">
+                    shemalucien5@gmail.com
+                  </p>
+                </div>
+
+
+              <div className="lg:w-full mr-3 flex flex-col justify-center items-center">
+                {/* <h2 className="title-font font-semibold tracking-widest text-xs text-center">
                   PHONE
-                </h2>
+                </h2> */}
+                <FiPhoneCall class="text-2xl mb-2" />
                 <p className="text-center">(+250)0788392932</p>
               </div>
 
@@ -94,11 +100,11 @@ export default function Contact() {
           netlify
           name="test"
           onSubmit={handleSubmit}
-          className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-          <h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
+          className="lg:w-1/2 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+          <h2 className="sm:text-4xl text-center text-3xl font-extrabold text-white-900 mb-4 ">
             Reach out to Me
           </h2>
-          <p className="leading-relaxed mb-5">
+          <p className="leading-relaxed text-center mb-5">
             Contact me, let’s make magic together
           </p>
           <div className="relative mb-4">

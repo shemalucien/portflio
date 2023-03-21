@@ -1,15 +1,19 @@
 import React from "react";
+// import { UsersIcon } from "@heroicons/react/solid";
+import {TfiWrite} from "react-icons/tfi";
 import { blogs } from "../data";
 
 export default function Blogs() {
   return (
-    <section id="projects" className="text-gray-400 body-font">
+    <section id="projects" className=" body-font">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 py-10">
-      <div className="text-3xl font-extrabold text-white-900">
-        <h1 className="sm:text-4xl text-3xl font-medium title-font mb-4 ">
-        My Blogs:
+      <div className="text-3xl w-full px-5 py-10 mx-auto text-center text-white-900">
+      {/* <UsersIcon className="w-10 inline-block mb-4" /> */}
+      <TfiWrite className="w-10 inline-block mb-4" />
+        <h1 className="sm:text-4xl text-3xl font-extrabold text-white-900 mb-4">
+        My Blogs
         </h1>
-        <p className="mt-4 text-lg text-gray-500">
+        <p className="mt-4 mb-4 text-lg">
         I have worked on many projects over the course of being a Web Developer, here are a few of my live, real-world projects
         </p>
       </div>
