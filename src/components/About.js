@@ -23,8 +23,8 @@ export default function About() {
             </div>
             <div className="">
                 <p className="mt-4 text-lg text-gray-500">
-                    <h1 className="text-3xl font-extrabold text-white ">
-                       <span className="text-blue-500 text-6xl mr-5">2+</span>
+                    <h1 className="text-xl font-extrabold ">
+                       <span className="text-blue-500 text-3xl mr-5">2+</span>
                         Years of experience. in Software Development and Cyber Security Fields.
                     </h1>
                 </p>

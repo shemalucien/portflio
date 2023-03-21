@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import { FaSun, FaMoon } from "react-icons/fa";
 export default function Navbar(props) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,7 +46,10 @@ export default function Navbar(props) {
                 >
                   <Link to="signup"> Signup</Link>
                 </a>
-                <button className="block px-3 py-2 rounded-md text-base font-medium  focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out" onClick={props.toggleDarkMode}>Dark Mode</button>
+                {/* <button className="block px-3 py-2 rounded-md text-base font-medium  focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out" onClick={props.toggleDarkMode}>Dark Mode</button> */}
+                <button className="" onClick={props.toggleDarkMode}>
+                  {darkMode ? <FaMoon /> : <FaSun />}
+                </button>
               </div>
             </div>
             <div className="-mr-2 flex md:hidden">
