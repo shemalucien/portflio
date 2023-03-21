@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { userSelector, fetchUserBytoken, clearState } from './UserSlice';
-import Loader from 'react-loader-spinner';
+import { Audio } from  'react-loader-spinner'
 import { useHistory } from 'react-router-dom';
 
 const Dashboard = () => {
@@ -30,7 +30,12 @@ const Dashboard = () => {
   return (
     <div className="container mx-auto">
       {isFetching ? (
-        <Loader type="Puff" color="#00BFFF" height={100} width={100} />
+      <Audio
+      height="100"
+      width="100"
+      color='grey'
+      ariaLabel='loading'
+    />
       ) : (
         <Fragment>
           
