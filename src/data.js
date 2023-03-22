@@ -23,6 +23,7 @@ export const projects = [
     image: "./project-3.gif",
     link: "https://reactbootcamp.com",
   },
+  
 ];
 
 export const experiences = [

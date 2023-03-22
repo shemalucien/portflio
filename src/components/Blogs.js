@@ -5,7 +5,7 @@ import { blogs } from "../data";
 
 export default function Blogs() {
   return (
-    <section id="projects" className=" body-font">
+    <section id="blogs" className=" body-font">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 py-10">
       <div className="text-3xl w-full px-5 py-10 mx-auto text-center text-white-900">
       {/* <UsersIcon className="w-10 inline-block mb-4" /> */}

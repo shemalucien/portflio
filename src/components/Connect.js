@@ -4,8 +4,8 @@ export default function Connect() {
         <div className="mb-5 text-center bg-base-300 text-base-content">
             <div className="">
                 <div className="">
-                    <h2 className="text-2xl font-semibold text-center text-gray-300">Connect with me:</h2>
-                    <p classNameName="text-xl font-semibold text-center text-gray-300">
+                    <h2 className="text-2xl font-semibold text-center ">Connect with me:</h2>
+                    <p classNameName="text-xl font-semibold text-center ">
                         Satisfied with me? Please contact me
                     </p>
                     <button className="bg-blue-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded mr-2">

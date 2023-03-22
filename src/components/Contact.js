@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineMail } from 'react-icons/ai';
-import {FiPhoneCall} from 'react-icons/fi';
-import {MdLocationOff} from 'react-icons/md';
+import { FiPhoneCall } from 'react-icons/fi';
+import { MdLocationOff } from 'react-icons/md';
 export default function Contact() {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
@@ -62,35 +62,19 @@ export default function Contact() {
               </p>
 
             </div>
-            <div className="lg:w-full flex flex-1 mt-12">
-              <div className="lg:w-full mr-3 flex flex-col justify-center items-center">
-                {/* <h2 className="title-font font-semibold tracking-widest text-xs text-center ">
-                  ADDRESS
-                </h2> */}
+            <div className="lg:w-full flex flex-col lg:flex-row lg:justify-between mt-12">
+              <div className="lg:w-1/3 flex flex-col justify-center items-center mb-6 lg:mb-0">
                 <MdLocationOff className="inline-block mb-2 text-xl" />
-                <p className="text-center">
-                  Kigali,Rwanda
-                </p>
+                <p className="text-center">Kigali,Rwanda</p>
               </div>
-                <div class="lg:w-full mr-3 flex flex-col justify-center items-center">
-                       {/* <h2 className="title-font font-semibold  text-xs tracking-widest text-center">
-                  EMAIL
-                </h2> */}
-                  <AiOutlineMail class="text-2xl mb-2" />
-                  <p className="text-indigo-400 text-center">
-                    shemalucien5@gmail.com
-                  </p>
-                </div>
-
-
-              <div className="lg:w-full mr-3 flex flex-col justify-center items-center">
-                {/* <h2 className="title-font font-semibold tracking-widest text-xs text-center">
-                  PHONE
-                </h2> */}
+              <div className="lg:w-1/3 flex flex-col justify-center items-center mb-6 lg:mb-0">
+                <AiOutlineMail class="text-2xl mb-2" />
+                <p className="text-center">shemalucien5@gmail.com</p>
+              </div>
+              <div className="lg:w-1/3 flex flex-col justify-center items-center">
                 <FiPhoneCall class="text-2xl mb-2" />
                 <p className="text-center">(+250)0788392932</p>
               </div>
-
             </div>
           </div>
 

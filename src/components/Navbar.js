@@ -29,7 +29,7 @@ export default function Navbar(props) {
                 <a href="#about" className="block mt-4 px-1 py-1 rounded-md hover:text-white hover:bg-blue-500 lg:inline-block lg:mt-0 text-white-200 ">
                   About me
                 </a>
-                <a href="#proects" className="block mt-4 px-1 py-1 rounded-md hover:text-white hover:bg-blue-500 lg:inline-block lg:mt-0 text-white-200 ">
+                <a href="#projects" className="block mt-4 px-1 py-1 rounded-md hover:text-white hover:bg-blue-500 lg:inline-block lg:mt-0 text-white-200 ">
                   Projects
                 </a>
                 <a href="#experiences" className="block mt-4 px-1 py-1 rounded-md hover:text-white hover:bg-blue-500 lg:inline-block lg:mt-0 text-white-200 ">
@@ -125,9 +125,9 @@ export default function Navbar(props) {
               <Link to="signup"> Signup</Link>
             </a>
             {/* <button className="block px-3 py-2 rounded-md text-base font-medium  focus:outline-none focus:text-white focus:bg-blue-500 transition duration-150 ease-in-out" onClick={props.toggleDarkMode}>Dark Mode</button> */}
-            {/* <button className="" onClick={props.toggleDarkMode}>
+            <button className="" onClick={props.toggleDarkMode}>
               {darkMode ? <FaMoon /> : <FaSun />}
-            </button> */}
+            </button>
           </div>
         </div>
       </nav>
