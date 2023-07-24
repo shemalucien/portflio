@@ -22,7 +22,7 @@ export default subscriptionSlice.reducer;
 export const sendSubscribe = (email) => async (dispatch) => {
   try {
     dispatch(addSubscriber(email));
-    const response = await fetch('http://localhost:5000/api/v1/subscribers/subscribe', {
+    const response = await fetch('https://backend-ep1x.onrender.com/api/v1/subscribers/subscribe', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

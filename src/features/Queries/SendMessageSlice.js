@@ -22,7 +22,7 @@ export const sendMessage = (name, email, message) => async (dispatch) => {
     try {
         dispatch(setLoading(true));
 
-        const response = await fetch('http://localhost:5000/api/v1/queries/', {
+        const response = await fetch('https://backend-ep1x.onrender.com/api/v1/queries/', {
             method: 'POST',
             headers: {
                 Accept: 'application/json',
