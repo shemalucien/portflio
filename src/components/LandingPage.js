@@ -15,19 +15,17 @@ import Footer from "./Footer";
 
 export default function LandingPage() {
     const [darkMode, setDarkMode] = useState(false);
-
     function toggleDarkMode() {
         setDarkMode(!darkMode);
     }
-
     return (
-        <main className="text-gray-400 bg-gray-900 body-font">
-            <div className={darkMode ? 'dark bg-gray-800 text-white' : 'bg-white text-black'}>
+        <main className="text-gray-400 bg-gray-900 body-font ">
+            <div className={darkMode ? 'dark bg-gray-800 text-white' : 'bg-white text-black'} >
                 <Navbar toggleDarkMode={toggleDarkMode} />
                 <Profile />
                 <Skills />
                 <About />
-                {/* <Services/> */}
+                <Services/>
                 <Projects />
                 <Experiences />
                 <Blogs />

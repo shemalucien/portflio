@@ -17,7 +17,7 @@ export default function Profile() {
               <a href="mailto:z5W2U@example.com">Hire Me</a>
             </button>
             <button className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-all duration-300">
-              <a href="https://drive.google.com/file/d/1TjhqZ-v6hY8-4g6vz_1y6v1y8T6v1y8/view?usp=sharing" target="_blank" rel="noreferrer">
+              <a href="https://drive.google.com/file/d/1wrG3qb6nWjSknIDJRofbo_FdKxOF8WL5/view?usp=sharing" target="_blank" rel="noreferrer">
                 My Resume
               </a></button>
           </div>

@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 // import {UsersIcon } from "@heroicons/react/solid";
 import {GiPlayerPrevious} from "react-icons/gi";
 import { experiences } from "../data";
 
 export default function Experiences() {
+
+
+  const [experiences, setExperiences] = useState([]);
+
+  useEffect(() => {
+    fetchExperiences();
+  }, []);
+
+  const fetchExperiences = async () => {
+    try {
+      const response = await axios.get('http://localhost:5000/api/v1/experiences/'); // Replace with the actual API endpoint to fetch projects
+      setExperiences(response.data.data); // Assuming the API response has a "data" field containing the projects array
+    } catch (error) {
+      console.error('Error fetching experiences:', error);
+    }
+  };
+
   return (
     <section id="experiences" className=" body-font">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 py-10">
@@ -17,8 +35,9 @@ export default function Experiences() {
         I have worked on many projects over the course of being a Web Developer, here are a few of my live, real-world projects
         </p>
       </div>
-      <div className="flex flex-wrap -m-4">
-        {experiences.map((experience) => (
+      <div className="flex flex-wrap -m-4 min-[320px]:justify-center">
+        {experiences.length > 0 ? (
+        experiences.map((experience) => (
           <a
             href={experience.link}
             key={experience.image}
@@ -40,7 +59,11 @@ export default function Experiences() {
               </div>
             </div>
           </a>
-        ))}
+        ))
+        ):(
+        <p className="text-gray-600 text-3xl flex items-center">No Experiences Found</p>
+        )
+      }
       </div>
     </div>
   </section>

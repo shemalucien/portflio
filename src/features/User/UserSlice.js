@@ -5,7 +5,7 @@ export const signupUser = createAsyncThunk(
   async ({ name, email, password }, thunkAPI) => {
     try {
       const response = await fetch(
-        'http://localhost:5000/api/users/register',
+        'https://backend-ep1x.onrender.com/api/v1/auth/signup',
         {
           method: 'POST',
           headers: {
@@ -24,7 +24,7 @@ export const signupUser = createAsyncThunk(
 
       if (response.status === 200) {
         localStorage.setItem('token', data.token);
-        return { ...data, username: name, email: email };
+        return { ...data, name: name, email: email };
       } else {
         return thunkAPI.rejectWithValue(data);
       }
@@ -40,7 +40,7 @@ export const loginUser = createAsyncThunk(
   async ({ email, password }, thunkAPI) => {
     try {
       const response = await fetch(
-        'http://localhost:5000/api/users/login',
+        'https://backend-ep1x.onrender.com/api/v1/auth/login',
         {
           method: 'POST',
           headers: {
@@ -73,7 +73,7 @@ export const fetchUserBytoken = createAsyncThunk(
   async ({ token }, thunkAPI) => {
     try {
       const response = await fetch(
-        'http://localhost:5000/api/users/',
+        'https://backend-ep1x.onrender.com/api/v1/auth/allusers',
         {
           method: 'GET',
           headers: {
@@ -101,7 +101,7 @@ export const fetchUserBytoken = createAsyncThunk(
 export const userSlice = createSlice({
   name: 'user',
   initialState: {
-    username: '',
+    name: '',
     email: '',
     isFetching: false,
     isSuccess: false,
@@ -123,7 +123,7 @@ export const userSlice = createSlice({
       state.isFetching = false;
       state.isSuccess = true;
       state.email = payload.email;
-      state.username = payload.name;
+      state.name = payload.name;
     },
     [signupUser.pending]: (state) => {
       state.isFetching = true;
@@ -134,8 +134,8 @@ export const userSlice = createSlice({
       state.errorMessage = payload.message;
     },
     [loginUser.fulfilled]: (state, { payload }) => {
-      state.email = payload.user.email;
-      state.username = payload.user.name;
+      state.email = payload.email;
+      state.name = payload.name;
       state.isFetching = false;
       state.isSuccess = true;
       return state;
@@ -166,7 +166,5 @@ export const userSlice = createSlice({
     },
   },
 });
-
 export const { clearState } = userSlice.actions;
-
 export const userSelector = (state) => state.user;

@@ -4,7 +4,6 @@ import UX from '../assets/UIUXDesign.jpg';
 import webdev from '../assets/webdev.jpg';
 import mobiledev from '../assets/mobiledev.png';
 import cyber from '../assets/cyber-security-solution.png';
-// import Projects from "./Projects";
 export default function About() {
     return (
         <div className="max-w-7xl mx-auto px-2 sm:px-2 lg:px-2 py-10 text-center ">
@@ -70,12 +69,6 @@ export default function About() {
                     </div>
                 </div>
             </div>
-
-
-            {/* <Projects /> */}
-
-
-
         </div>
     );
 };
